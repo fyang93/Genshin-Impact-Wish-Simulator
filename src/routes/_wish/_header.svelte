@@ -91,7 +91,8 @@
 			<img src={$assets['brand.png']} alt="Brand" crossorigin="anonymous" />
 
 			{#if !$editorMode}
-				<span> {$t('wish.wishTitle')} </span>
+				<!-- <span> {$t('wish.wishTitle')} </span> -->
+				<span> {$t('生日限定祈愿')} </span>
 			{:else}
 				<span> {$t('customBanner.title')} </span>
 			{/if}
@@ -99,9 +100,9 @@
 			<button class="help" on:click={handleMenu} title="Setting" aria-label="Setting">
 				<i class="gi-help" />
 			</button>
-			<button class="chat" on:click={chatToggle} title="Chats" aria-label="Chats">
+			<!-- <button class="chat" on:click={chatToggle} title="Chats" aria-label="Chats">
 				<i class="gi-chat" />
-			</button>
+			</button> -->
 
 			{#if !$isPWA || !$isMobile}
 				<button

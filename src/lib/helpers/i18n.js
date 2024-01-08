@@ -22,7 +22,7 @@ const checkLocale = () => {
 	const savedLocale = browser ? localConfig.get('locale') : null;
 	const browserLocale = savedLocale || getLocaleFromNavigator();
 	const usedLocale = supportedLocales.find((langID) => langID.includes(browserLocale));
-	return usedLocale || 'en-US';
+	return usedLocale || 'zh-CN';
 };
 
 const mountLocale = () => {
@@ -36,7 +36,7 @@ const mountLocale = () => {
 
 	const usedLocale = checkLocale();
 	init({
-		fallbackLocale: 'en-US',
+		fallbackLocale: 'zh-CN',
 		initialLocale: usedLocale
 	});
 };

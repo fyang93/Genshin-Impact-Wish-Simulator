@@ -74,13 +74,13 @@
 	};
 
 	let showUploader = false;
-	const publishBanner = async () => {
-		playSfx();
-		const isComplete = await localBanner.isComplete($editID);
-		if (isComplete) return (showUploader = true);
-		const toastMsg = $t('customBanner.completeAllField');
-		pushToast({ message: toastMsg, type: 'error' });
-	};
+	// const publishBanner = async () => {
+	// 	playSfx();
+	// 	const isComplete = await localBanner.isComplete($editID);
+	// 	if (isComplete) return (showUploader = true);
+	// 	const toastMsg = $t('customBanner.completeAllField');
+	// 	pushToast({ message: toastMsg, type: 'error' });
+	// };
 
 	setContext('closePublisher', () => (showUploader = false));
 	setContext('publishDone', () => {
@@ -220,7 +220,7 @@
 					<span> {$t('customBanner.finishAndWish')} </span>
 				</button>
 
-				<button
+				<!-- <button
 					class="wish-button"
 					style="flex-direction: row; line-height: 0;"
 					on:click={publishBanner}
@@ -235,7 +235,7 @@
 							<span> {$t('customBanner.publish')} </span>
 						{/if}
 					{/await}
-				</button>
+				</button> -->
 			</div>
 		{/if}
 	</div>

@@ -90,7 +90,7 @@
 			</div>
 
 			{#if current < 0}
-				<div class="text connecting" transition:fade>Connecting</div>
+				<div class="text connecting" transition:fade>连接中</div>
 			{:else}
 				<div class="text" in:fade>{current > 99 ? 100 : current.toFixed()}%</div>
 			{/if}

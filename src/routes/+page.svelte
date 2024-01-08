@@ -21,7 +21,7 @@
 
 	let status = '';
 	let pageActive = 'index';
-	let showWelcomeModal = true;
+	let showWelcomeModal = false;
 	let shareID = '';
 
 	let appReady = writable(false);
@@ -34,7 +34,8 @@
 
 	// Background animation
 	let animatedBG = localConfig.get('animatedBG');
-	const animatebg = () => (animatedBG = localConfig.get('animatedBG'));
+	// const animatebg = () => (animatedBG = localConfig.get('animatedBG'));
+	const animatebg = () => (animatedBG = true);
 	setContext('animateBG', animatebg);
 
 	// Background Music
